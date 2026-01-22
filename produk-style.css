@@ -1,0 +1,390 @@
+:root {
+  --utama: #89cff3;
+  --primary: #00a9ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 8rem;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.brand1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo1 {
+  width: 70px;
+  height: auto;
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: var(--utama);
+}
+
+header .navbar a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  color: #312e2e;
+}
+
+header .navbar a:hover {
+  color: #fff;
+  background: var(--primary);
+  border-radius: 2rem;
+}
+
+header .icon a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+}
+
+header .icon a:hover {
+  color: var(--utama);
+}
+
+header #toggler {
+  display: none;
+}
+
+header .bi-card-text {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 0.3rem solid rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* Section Styles */
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: transparent;
+}
+
+.heading span {
+  color: var(--primary);
+}
+
+/* Product Section */
+.produk {
+  background: linear-gradient(to bottom, #0c0d3f, #0b0b33);
+  padding: 4rem 9%;
+}
+
+.produk .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.produk .box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1rem rgba(7, 33, 68, 0.1);
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.produk .box-container .box .image {
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+
+.produk .box-container .box .image img {
+  height: 25rem;
+  object-fit: cover;
+}
+
+.produk .box-container .box:hover .image img {
+  transform: scale(1.1);
+}
+
+.produk .box-container .box .image .icon {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  display: none;
+}
+
+.produk .box-container .box:hover .image .icon {
+  bottom: 0;
+}
+
+.produk .box-container .box .image .icon a {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 50%;
+  background: var(--primary);
+  color: #fff;
+}
+
+.produk .box-container .box .image .icon a:hover {
+  background: #eee;
+  color: #333;
+}
+
+.produk .box-container .box .conten {
+  padding: 2rem;
+  text-align: center;
+}
+
+.produk .box-container .box .conten h3 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.produk .box-container .box .conten .harga {
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.produk .box-container .box .conten .harga span {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+/* Pesan Sekarang Button */
+.btn-pesan {
+  display: inline-block;
+  margin-top: 1.5rem;
+  border-radius: 5rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.btn-pesan:hover {
+  background: var(--utama);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 169, 255, 0.3);
+}
+
+.btn-pesan:active {
+  transform: translateY(-1px);
+}
+
+/* Load More Button */
+.btn2 {
+  margin-top: 3rem;
+}
+
+.btn2 .btn-primary {
+  background: var(--primary);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+}
+
+.btn2 .btn-primary:hover {
+  background: var(--utama);
+}
+
+/* Footer Styles */
+.footer {
+  background: #8ce4ff;
+  color: #201d1d;
+  padding: 4rem 0;
+  margin-top: 5rem;
+}
+
+.footer-box {
+  margin-top: 0;
+}
+
+.logo4 {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-box:not(:first-child) {
+  padding-left: 80px;
+}
+
+.footer .footer-box h3 {
+  color: #333333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-box h4 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer .footer-box p,
+.footer .footer-box a {
+  color: #333;
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+}
+
+.footer .footer-box a:hover {
+  color: #fff;
+}
+
+.footer .credit {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 0.1rem solid #333;
+  font-size: 1.4rem;
+}
+
+.footer .credit span {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .bi-card-text {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    transform: translateY(-30px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  header #toggler:checked ~ .navbar {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .produk .box-container {
+    gap: 1.5rem;
+  }
+
+  .footer-box:not(:first-child) {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .btn-pesan {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+}
