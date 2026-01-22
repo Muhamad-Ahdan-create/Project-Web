@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00A9FF, #2ecc71);
+    color: #fff;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 3rem;
+    padding: 10px 26px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.35s ease;
+}
+
+/* Hover effect */
+.back-btn:hover {
+    background: #fff;
+    color: #00A9FF;
+    transform: translateX(-6px);
+}
+
+/* Optional icon style */
+.back-btn::before {
+    content: "";
+    font-size: 1.2rem;
+}
+
+
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.heading span {
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    margin-right: 1rem;
+    background: linear-gradient(135deg, #00A9FF, #2ecc71);
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* efek kolom / garis samping */
+.heading span::before,
+.heading span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 3px;
+    background: #fff;
+}
+
+.heading span::before {
+    left: -90px;
+}
+
+.heading span::after {
+    right: -180px;
+}
+
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    padding: 80px 8%;
+}
+
+
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.heading span {
+    color: #fff;
+}
+
+/* ===== ROW LAYOUT ===== */
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ===== VIDEO CONTAINER ===== */
+.video-container {
+    position: relative;
+    flex: 1 1 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 3px 6px #222;
+}
+
+.video-container h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+}
+
+/* ===== CONTENT ===== */
+.conten {
+    flex: 1 1 420px;
+}
+
+.conten h3 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.conten p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #27ae60;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #219150;
+    letter-spacing: 1px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .heading span {
+        padding: 0.7rem 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    .heading span {
+        padding: 0.6rem 2rem;
+    }
+
+    .heading span::before,
+    .heading span::after {
+        width: 30px;
+    }
+
+    .heading span::before {
+        left: -40px;
+    }
+
+    .heading span::after {
+        right: -40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .heading span {
+        display: block;
+        margin: 0 auto 1rem;
+        width: fit-content;
+    }
+
+    .heading span::before,
+    .heading span::after {
+        display: none;
+    }
+}
