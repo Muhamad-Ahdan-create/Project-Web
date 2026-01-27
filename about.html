@@ -7,22 +7,43 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <section class="about" id="about">
-        <a href="index.html" class="back-btn">Kembali</a>
-    <h1 class="heading"><span> about </span> us</h1>
-           <div class="row"> 
-                <div class="video-container">
-                    <video src="image/v1.mp4" loop autoplay muted></video>
-                    <h3>Best hiking tools</h3>
-    
-                </div>
-                <div class="conten">
-                <h3>why cose us?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi atque velit sed, omnis magni voluptatibus repellat distinctio optio soluta cum quis esse quod quisquam aperiam.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum itaque a voluptates minus, culpa perferendis!</p>
-                <a href="#" class="btn">Learn more</a>
-                </div>
-            </div> 
-    </section>
+
+<section class="about" id="about">
+    <a href="index.html" class="back-btn">Kembali</a>
+
+    <h1 class="heading"><span></span></h1>
+
+    <div class="row"> 
+        <div class="video-container">
+            <video src="image/v1.mp4" loop autoplay muted></video>
+            <h3>Best hiking tools</h3>
+        </div>
+
+        <div class="conten">
+            <h3>why choose us?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </div> 
+</section>
+
+<!-- FORM HARUS DI DALAM BODY -->
+<section class="about-form">
+
+    <h2 class="heading"><span>Data Pengunjung</span></h2>
+
+    <form id="aboutForm">
+        <input type="text" name="nama" placeholder="Nama" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="pesan" placeholder="Pesan" required></textarea>
+        <button type="submit" class="btn">Kirim</button>
+    </form>
+
+    <p id="status"></p>
+
+</section>
+
+<script src="about.js"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@ body {
 }
 
 .back-btn {
+    position: relative;
+    top: 0;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -45,6 +47,8 @@ body {
 
 
 .heading {
+    position: relative;
+    top: 0;
     text-align: center;
     font-size: 4rem;
     margin-bottom: 5rem;
@@ -72,14 +76,15 @@ body {
     width: 50px;
     height: 3px;
     background: #fff;
+    transform: translateY(-50%);
 }
 
 .heading span::before {
-    left: -90px;
+    left: -70px;
 }
 
 .heading span::after {
-    right: -180px;
+    right: -70px;
 }
 
 
@@ -95,10 +100,16 @@ body {
     font-size: 3rem;
     margin-bottom: 60px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .heading span {
     color: #fff;
+}
+
+.heading:hover {
+    letter-spacing: 1px;
+
 }
 
 /* ===== ROW LAYOUT ===== */
@@ -115,7 +126,12 @@ body {
     flex: 1 1 420px;
     border-radius: 20px;
     overflow: hidden;
+    transition: 0.5s;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.video-container:hover {
+    transform: scale(1.05);
 }
 
 .video-container video {
@@ -139,6 +155,8 @@ body {
 
 /* ===== CONTENT ===== */
 .conten {
+    position: relative;
+    left: -400px;
     flex: 1 1 420px;
 }
 
