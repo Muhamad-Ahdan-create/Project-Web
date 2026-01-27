@@ -286,7 +286,7 @@ header .bi-card-text{
 
 .icon-container .icon img{
     height: 5rem;
-    margin-right: 2rem
+    margin-right: 3rem
 }
 
 .icon-container .icon h3{
@@ -301,35 +301,24 @@ header .bi-card-text{
 }
 
 .produk .box-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
-}
-
-.produk .box-container .box{
-    flex: 1 1 30rem;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    border-radius: .5rem;
-    border: .2rem solid rgba(0,0,0,.1);
-    position: relative;
+    min-width: 1200px;
+        
     
 }
 
-/* .produk .box-container .box .diskon{
-    position: absolute;
-    top: 1rem; left: 1rem;
-    padding: .7rem 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    background: rgba(0, 0, 0,.1);
-    z-index: 1;
-} */
-
-
-
-
-
+.produk .box-container .box{
+    width: 100%;
+    flex: 1 1 25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: 2.5rem;
+    border: .2rem solid rgba(0,0,0,.1);
+    position: relative;
+    
+    
+}
 
 .produk .box-container .box .image{
     position: relative;
