@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(100deg, #04d9ff, #12e647);
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 9px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.btn-kembali {
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-kembali:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    form {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+
+    textarea {
+        height: 75px;
+    }
+
+    button {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1.3rem;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="review.css" />
+    <title>Review</title>
+  </head>
+  <body>
+    <h2>Review Produk Space Outdoor</h2>
+
+    <form id="reviewForm">
+      <input type="text" id="nama" placeholder="Nama Anda" required />
+
+      <select id="barang" required>
+        <option value="">Pilih Produk</option>
+        <option>Carrier</option>
+        <option>Sleeping Bag</option>
+        <option>Tenda</option>
+        <option>Sepatu</option>
+        <option>Tracking pool</option>
+        <option>Daypack</option>
+      </select>
+
+      <select id="rating" required>
+        <option value="">Rating</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+
+      <textarea id="komentar" placeholder="Komentar" required></textarea>
+      <button type="submit">Kirim Review</button>
+      <a href="index.html" class="btn-kembali">Kembali</a>
+    </form>
+
+    <script>
+      const API_URL =
+        "https://script.google.com/macros/s/AKfycby6o___h-ITypeQ95qLxOYWVbA9RQBodwWH8IFsUUtq5hbYiK4oIzyCyG3n8uKMGuQg-A/exec";
+
+      document
+        .getElementById("reviewForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const data = {
+            nama: document.getElementById("nama").value,
+            barang: document.getElementById("barang").value,
+            rating: document.getElementById("rating").value,
+            komentar: document.getElementById("komentar").value,
+          };
+
+          fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify(data),
+          })
+            .then((res) => res.json())
+            .then(() => {
+              alert("Review berhasil dikirim!");
+              this.reset();
+            })
+            .catch(() => {
+              alert("Gagal kirim review!");
+            });
+        });
+    </script>
+  </body>
+</html>
